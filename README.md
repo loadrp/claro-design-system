@@ -3,7 +3,7 @@
 > Réplica fiel do **Design System Mondrian** da Claro Brasil — componentes de interface reconstruídos com React 19, Next.js 16 e Tailwind CSS v4.
 
 <p align="center">
-  <img src="showcase.png" alt="Claro Components Showcase" width="100%" />
+  <img src="showcase-v6.png" alt="Claro Components Showcase" width="100%" />
 </p>
 
 ## Sobre
