@@ -151,21 +151,68 @@ export default function PlanosPage() {
         </div>
       </header>
 
-      {/* Hero Banner */}
+      {/* Hero Carousel */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <ClaroBanner
-          title="Fibra 350 Mega + Globoplay"
-          subtitle="Oferta Exclusiva"
-          description="Internet ultra veloz com streaming incluso. Aproveite agora!"
-          priceInteger="89"
-          priceCents="90"
-          pricePeriod="/mês"
-          priceLabel="por apenas"
-          ctaText="Compre online"
-          variant="gradient"
-          layout="right"
-          imageSrc="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=500&fit=crop"
-          imageAlt="Mulher feliz usando internet"
+          slides={[
+            {
+              id: "1",
+              type: "custom",
+              imageSrc:
+                "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&h=420&fit=crop",
+              imageAlt: "600 Mega com Globoplay incluso",
+              title: "600 Mega com Globoplay incluso",
+              subtitle: "+ Wi-Fi grátis",
+              fullPrice: "99,90",
+              priceInteger: "49",
+              priceCents: "90",
+              pricePeriod: "/mês",
+              priceNote: "Por 6 meses. Após R$ 99,90 /mês",
+              ctaText: "Assinar",
+              href: "#",
+            },
+            {
+              id: "2",
+              type: "custom",
+              imageSrc:
+                "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=420&fit=crop",
+              imageAlt: "600 Mega + Pós 60GB",
+              title: "600 Mega + Pós 60GB",
+              subtitle: "com Globoplay incluso e Passaporte Américas",
+              subtitleColor: "highlight",
+              fullPrice: "129,90",
+              priceInteger: "99",
+              priceCents: "90",
+              pricePeriod: "/mês",
+              priceNote: "Por 6 meses. Após R$ 129,90 /mês",
+              ctaText: "Assinar",
+              href: "#",
+            },
+            {
+              id: "3",
+              type: "basic",
+              imageSrc:
+                "https://images.unsplash.com/photo-1574375927938-d5a98e8efe85?w=1920&h=420&fit=crop",
+              imageAlt: "Box Claro tv+ com 6 streamings inclusos",
+              href: "#",
+            },
+            {
+              id: "4",
+              type: "basic",
+              imageSrc:
+                "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1920&h=420&fit=crop",
+              imageAlt: "Controle 35GB Mês das Mães",
+              href: "#",
+            },
+            {
+              id: "5",
+              type: "basic",
+              imageSrc:
+                "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1920&h=420&fit=crop",
+              imageAlt: "Moto G35",
+              href: "#",
+            },
+          ]}
         />
       </section>
 
@@ -435,18 +482,23 @@ export default function PlanosPage() {
       {/* Banner Empresa */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <ClaroBanner
-          title="Oferta Relâmpago Claro Empresas"
-          subtitle="Claro Empresas"
-          description="400 Mega com proteção McAfee. Exclusivo no CNPJ."
-          priceInteger="79"
-          priceCents="90"
-          pricePeriod="/mês"
-          priceLabel="por apenas"
-          ctaText="Compre Online"
-          variant="secondary"
-          layout="left"
-          imageSrc="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&h=350&fit=crop"
-          imageAlt="Empresário trabalhando"
+          slides={[
+            {
+              id: "empresa",
+              type: "custom",
+              imageSrc:
+                "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&h=420&fit=crop",
+              imageAlt: "Oferta Relâmpago Claro Empresas",
+              title: "Oferta Relâmpago Claro Empresas",
+              subtitle: "400 Mega com proteção McAfee. Exclusivo no CNPJ.",
+              priceInteger: "79",
+              priceCents: "90",
+              pricePeriod: "/mês",
+              priceNote: "por apenas",
+              ctaText: "Compre Online",
+              href: "#",
+            },
+          ]}
         />
       </section>
 
