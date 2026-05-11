@@ -41,14 +41,13 @@ const ClaroToggle = React.forwardRef<HTMLInputElement, ClaroToggleProps>(
               "peer-focus-visible:ring-2 peer-focus-visible:ring-[var(--color-brand-primary-medium)] peer-focus-visible:ring-offset-2",
               "peer-disabled:opacity-50 peer-disabled:cursor-not-allowed"
             )}
-          >
-            <div
-              className={cn(
-                "absolute top-[2px] left-[2px] h-5 w-5 rounded-lg bg-white transition-all duration-200 shadow-sm",
-                "peer-checked:translate-x-5"
-              )}
-            />
-          </div>
+          />
+          <div
+            className={cn(
+              "absolute top-[2px] left-[2px] h-5 w-5 rounded-lg bg-white transition-all duration-200 shadow-sm",
+              "peer-checked:translate-x-5"
+            )}
+          />
         </div>
         {label && (
           <span className="text-sm font-medium text-[var(--color-neutral-darkest)]">

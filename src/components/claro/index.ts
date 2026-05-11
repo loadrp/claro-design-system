@@ -74,3 +74,6 @@ export type { LinkListItem } from "./linklist";
 export { ClaroTopic } from "./topic";
 
 export { ClaroFooter } from "./footer";
+
+export { ClaroBanner } from "./banner";
+export type { ClaroBannerProps } from "./banner";
