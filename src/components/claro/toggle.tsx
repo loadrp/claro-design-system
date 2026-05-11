@@ -35,7 +35,7 @@ const ClaroToggle = React.forwardRef<HTMLInputElement, ClaroToggleProps>(
           />
           <div
             className={cn(
-              "w-11 h-6 rounded-full border border-[var(--color-neutral-medium)] transition-all duration-200",
+              "w-11 h-6 rounded-xl border border-[var(--color-neutral-medium)] transition-all duration-200",
               "bg-[var(--color-neutral-medium)]",
               "peer-checked:bg-[var(--color-brand-secondary-darkest)] peer-checked:border-[var(--color-brand-secondary-darkest)]",
               "peer-focus-visible:ring-2 peer-focus-visible:ring-[var(--color-brand-primary-medium)] peer-focus-visible:ring-offset-2",
@@ -44,7 +44,7 @@ const ClaroToggle = React.forwardRef<HTMLInputElement, ClaroToggleProps>(
           >
             <div
               className={cn(
-                "absolute top-[2px] left-[2px] h-5 w-5 rounded-full bg-white transition-all duration-200 shadow-sm",
+                "absolute top-[2px] left-[2px] h-5 w-5 rounded-lg bg-white transition-all duration-200 shadow-sm",
                 "peer-checked:translate-x-5"
               )}
             />

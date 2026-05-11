@@ -50,7 +50,7 @@ const ClaroProgressBar = React.forwardRef<
       >
         <div
           className={cn(
-            "flex-1 overflow-hidden rounded-full bg-[var(--color-neutral-medium)]",
+            "flex-1 overflow-hidden rounded-xl bg-[var(--color-neutral-medium)]",
             sizeMap[size]
           )}
           role="progressbar"
@@ -59,7 +59,7 @@ const ClaroProgressBar = React.forwardRef<
           aria-valuemax={max}
         >
           <div
-            className={cn("h-full rounded-full transition-all duration-500", colorMap[color])}
+            className={cn("h-full rounded-xl transition-all duration-500", colorMap[color])}
             style={{ width: `${percentage}%` }}
           />
         </div>
