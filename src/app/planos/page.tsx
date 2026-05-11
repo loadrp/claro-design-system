@@ -17,6 +17,7 @@ import {
   ClaroText,
   ClaroTooltip,
   ClaroToggle,
+  ClaroDrawer,
 } from "@/components/claro";
 
 const planosInternet = [
@@ -124,6 +125,13 @@ const faqItems = [
 
 export default function PlanosPage() {
   const [city, setCity] = useState("São Paulo - SP");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedPlano, setSelectedPlano] = useState<any>(null);
+
+  const openDrawer = (plano: any) => {
+    setSelectedPlano(plano);
+    setDrawerOpen(true);
+  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -151,15 +159,15 @@ export default function PlanosPage() {
         </div>
       </header>
 
-      {/* Hero Carousel */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      {/* Hero Carousel — Full Width */}
+      <section className="w-full">
         <ClaroBanner
           slides={[
             {
               id: "1",
               type: "custom",
               imageSrc:
-                "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&h=420&fit=crop",
+                "https://www.claro.com.br/files/104379/1920x420/3faccb15f9/img-banner-custom-relampago-novo-kv-350-500mega-desk-1.jpg?sq=100",
               imageAlt: "600 Mega com Globoplay incluso",
               title: "600 Mega com Globoplay incluso",
               subtitle: "+ Wi-Fi grátis",
@@ -175,7 +183,7 @@ export default function PlanosPage() {
               id: "2",
               type: "custom",
               imageSrc:
-                "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=420&fit=crop",
+                "https://www.claro.com.br/files/104379/1920x420/6b8663ba0d/img-banner-custom-basic-torcida-gm-md-desk.jpg?sq=100",
               imageAlt: "600 Mega + Pós 60GB",
               title: "600 Mega + Pós 60GB",
               subtitle: "com Globoplay incluso e Passaporte Américas",
@@ -192,7 +200,7 @@ export default function PlanosPage() {
               id: "3",
               type: "basic",
               imageSrc:
-                "https://images.unsplash.com/photo-1574375927938-d5a98e8efe85?w=1920&h=420&fit=crop",
+                "https://www.claro.com.br/files/104379/1920x420/db57ccec0d/img-banner-basic-torcida-wi-fi-saiba-mais-desk.jpg?sq=100",
               imageAlt: "Box Claro tv+ com 6 streamings inclusos",
               href: "#",
             },
@@ -200,16 +208,16 @@ export default function PlanosPage() {
               id: "4",
               type: "basic",
               imageSrc:
-                "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1920&h=420&fit=crop",
-              imageAlt: "Controle 35GB Mês das Mães",
+                "https://www.claro.com.br/files/104379/1920x420/9ccf2ab181/img-banner-basic-torcida-streamings-desk-2-2-1.jpg?sq=75",
+              imageAlt: "Box Claro tv+ com 6 streamings inclusos",
               href: "#",
             },
             {
               id: "5",
               type: "basic",
               imageSrc:
-                "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1920&h=420&fit=crop",
-              imageAlt: "Moto G35",
+                "https://www.claro.com.br/files/104379/1920x420/3b76c5ae0e/site-controle-40gb-maes-banner-desk.jpg?sq=75",
+              imageAlt: "Controle 35GB Mês das Mães",
               href: "#",
             },
           ]}
@@ -278,9 +286,12 @@ export default function PlanosPage() {
                   size="md"
                 />
                 <ClaroButton block>Contrate online</ClaroButton>
-                <ClaroLink href="#" underline className="text-xs text-center">
+                <button
+                  onClick={() => openDrawer(plano)}
+                  className="text-xs text-center text-[var(--color-brand-primary-medium)] underline hover:no-underline"
+                >
                   Mais detalhes
-                </ClaroLink>
+                </button>
               </ClaroCardFooter>
             </ClaroCard>
           ))}
@@ -435,9 +446,12 @@ export default function PlanosPage() {
                 <ClaroButton size="sm" block>
                   Contrate online
                 </ClaroButton>
-                <ClaroLink href="#" underline className="text-xs text-center">
+                <button
+                  onClick={() => openDrawer(plano)}
+                  className="text-xs text-center text-[var(--color-brand-primary-medium)] underline hover:no-underline"
+                >
                   Mais detalhes
-                </ClaroLink>
+                </button>
               </ClaroCardFooter>
             </ClaroCard>
           ))}
@@ -560,6 +574,71 @@ export default function PlanosPage() {
           </p>
         </div>
       </footer>
+
+      {/* Drawer lateral — Mais detalhes */}
+      <ClaroDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        title={selectedPlano?.name}
+        sections={[
+          {
+            id: "internet",
+            icon: (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0" />
+              </svg>
+            ),
+            title: selectedPlano?.name || "Plano",
+            content: (
+              <div className="space-y-2">
+                <p>{selectedPlano?.description}</p>
+                <ul className="space-y-1">
+                  {selectedPlano?.features?.map((f: string, i: number) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <svg className="w-4 h-4 text-[var(--color-support-success-dark)]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ),
+          },
+          {
+            id: "regulamentos",
+            icon: (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            ),
+            title: "Regulamentos",
+            content: (
+              <div className="space-y-2">
+                <p>Oferta válida por tempo limitado para novas assinaturas.</p>
+                <p>Consulte disponibilidade técnica para sua região.</p>
+                <p>Sujeito a análise de crédito e aprovação.</p>
+              </div>
+            ),
+          },
+        ]}
+        footer={
+          selectedPlano && (
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-[var(--color-neutral-dark)]">Valor mensal</span>
+                <ClaroPrice
+                  integer={selectedPlano.priceInteger}
+                  cents={selectedPlano.priceCents}
+                  period="/mês"
+                  size="md"
+                />
+              </div>
+              <ClaroButton block>Assinar</ClaroButton>
+            </div>
+          )
+        }
+      />
     </main>
   );
 }

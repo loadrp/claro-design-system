@@ -62,7 +62,7 @@ const ClaroBanner = React.forwardRef<HTMLDivElement, ClaroBannerProps>(
     return (
       <div
         ref={ref}
-        className={cn("relative overflow-hidden rounded-2xl", className)}
+        className={cn("relative w-full overflow-hidden", className)}
         role="region"
         aria-roledescription="carousel"
         aria-label="Ofertas em destaque"
@@ -82,7 +82,7 @@ const ClaroBanner = React.forwardRef<HTMLDivElement, ClaroBannerProps>(
                 aria-hidden={!isActive}
               >
                 {/* Background image */}
-                <div className="relative w-full aspect-[1920/420] md:aspect-[1920/420] min-h-[280px] md:min-h-[320px] lg:min-h-[380px]">
+                <div className="relative w-full aspect-[21/9] md:aspect-[1920/420] min-h-[220px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[380px]">
                   <img
                     src={slide.imageSrc}
                     alt={slide.imageAlt || ""}

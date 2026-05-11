@@ -77,3 +77,6 @@ export { ClaroFooter } from "./footer";
 
 export { ClaroBanner } from "./banner";
 export type { BannerSlide } from "./banner";
+
+export { ClaroDrawer } from "./drawer";
+export type { DrawerSection } from "./drawer";
