@@ -1,0 +1,129 @@
+/*
+* Mondrian Tokens - Claro
+* v3.4.0
+* Build do dia 12/02/2026 - 08h:48m:53s GTM-0300.
+*
+* https://mondrian.claro.com.br
+* Copyright (c) 2019 - 2026 Claro <squadmondrian@globalhitss.com.br>
+* Todos os direitos reservados.
+*
+* A redistribuicao ou alteracao sem a permissao dos proprietarios do software e proibida.
+*/
+:root {
+  --border-radius-none: 0px;
+  --border-radius-xs: 4px;
+  --border-radius-sm: 12px;
+  --border-radius-md: 24px;
+  --border-radius-lg: 32px;
+  --border-radius-pill: 500px;
+  --border-radius-circle: 50%;
+  --border-style-default: solid;
+  --border-width-none: 0px;
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+  --color-brand-primary-darkest: #83170F;
+  --color-brand-primary-dark: #B41E13;
+  --color-brand-primary-medium: #DA291C;
+  --color-brand-primary-light: #FC867F;
+  --color-brand-primary-lightest: #FFE3E3;
+  --color-brand-secondary-darkest: #005c66;
+  --color-brand-secondary-medium: #00818f;
+  --color-brand-secondary-light: #00AFC2;
+  --color-brand-secondary-lightest: #00DDF5;
+  --color-neutral-darkest: #1F1D1D;
+  --color-neutral-dark: #525252;
+  --color-neutral-medium: #DBDBDB;
+  --color-neutral-light: #F8F8F8;
+  --color-neutral-lightest: #FFFFFF;
+  --color-support-danger-dark: #B84D01;
+  --color-support-danger-light: #FFFAAD;
+  --color-support-highlight-dark: #FB9C2D;
+  --color-support-highlight-darkest: #B84D01;
+  --color-support-highlight-light: #FFE458;
+  --color-support-highlight-lightest: #FFFAAD;
+  --color-support-highlight-medium: #FFC722;
+  --color-support-success-dark: #006B4F;
+  --color-support-success-light: #DDF9ED;
+  --font-family-base: "Roboto";
+  --font-family-highlight: "AMX";
+  --font-family-code: "monospace";
+  --font-line-height-lg: 140%;
+  --font-line-height-md: 130%;
+  --font-line-height-sm: 100%;
+  --font-line-height-none: 0%;
+  --font-size-xxxs: 12px;
+  --font-size-xxs: 14px;
+  --font-size-xs: 16px;
+  --font-size-sm: 20px;
+  --font-size-md: 24px;
+  --font-size-lg: 28px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 36px;
+  --font-size-xxxl: 48px;
+  --font-weight-black: 800;
+  --font-weight-bold: 700;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --opacity-intense: 0.64;
+  --opacity-light: 0.16;
+  --opacity-medium: 0.32;
+  --opacity-semi-opaque: 0.8;
+  --opacity-semi-transparent: 0.08;
+  --optical-adjusts-sm: -2;
+  --optical-adjusts-xs: -1;
+  --screen-size-ul: 1920px;
+  --screen-size-xxxl: 1440px;
+  --screen-size-xxl: 1200px;
+  --screen-size-xl: 1024px;
+  --screen-size-lg: 992px;
+  --screen-size-md: 768px;
+  --screen-size-sm: 640px;
+  --screen-size-xs: 540px;
+  --screen-size-xxs: 480px;
+  --screen-size-xxxs: 360px;
+  --shadow-blur-radius-level-1: 8px;
+  --shadow-blur-radius-level-2: 16px;
+  --shadow-blur-radius-level-3: 24px;
+  --shadow-offset-x-none: 0px;
+  --shadow-offset-y-level-1: 4px;
+  --shadow-offset-y-level-2: 8px;
+  --shadow-offset-y-level-3: 16px;
+  --shadow-spread-radius-default: -2px;
+  --spacing-inline-xxxs: 4px;
+  --spacing-inline-xxs: 8px;
+  --spacing-inline-xs: 12px;
+  --spacing-inline-sm: 16px;
+  --spacing-inline-md: 24px;
+  --spacing-inline-lg: 32px;
+  --spacing-inline-xl: 48px;
+  --spacing-inline-xxl: 64px;
+  --spacing-inset-xxxs: 4px;
+  --spacing-inset-xxs: 8px;
+  --spacing-inset-xs: 12px;
+  --spacing-inset-sm: 16px;
+  --spacing-inset-md: 24px;
+  --spacing-inset-lg: 32px;
+  --spacing-inset-xl: 48px;
+  --spacing-squish-xxxs: 4px 8px;
+  --spacing-squish-xxs: 4px 16px;
+  --spacing-squish-xs: 8px 16px;
+  --spacing-squish-sm: 8px 24px;
+  --spacing-squish-md: 16px 24px;
+  --spacing-squish-lg: 16px 32px;
+  --spacing-squish-xl: 24px 32px;
+  --spacing-squish-xxl: 32px 48px;
+  --spacing-stack-xxxs: 4px;
+  --spacing-stack-xxs: 8px;
+  --spacing-stack-xs: 12px;
+  --spacing-stack-sm: 16px;
+  --spacing-stack-md: 24px;
+  --spacing-stack-lg: 32px;
+  --spacing-stack-xl: 48px;
+  --spacing-stack-xxl: 64px;
+  --spacing-stack-xxxl: 96px;
+  --text-strike: line-through;
+  --text-underline: underline;
+  --text-uppercase: uppercase;
+}
